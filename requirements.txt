@@ -1,0 +1,33 @@
+# --- Lecture et extraction de texte depuis PDF ---
+PyMuPDF
+
+# --- Appels au modèle de langage (LLM) ---
+openai
+
+# --- Manipulation et validation JSON (optionnel mais utile) ---
+jsonschema
+
+# --- Affichage amélioré dans le terminal (optionnel mais utile) ---
+rich
+
+# --- Environnement Jupyter Notebook (pour la démo) ---
+jupyter
+
+# --- Modèles HF (au cas où vous voulez étendre plus tard) ---
+transformers
+sentence-transformers
+accelerate
+requests
+gTTS
+streamlit-webrtc
+soundfile
+av
+requests
+streamlit
+PyMuPDF
+requests
+gTTS
+streamlit-webrtc
+soundfile
+av
+numpy
