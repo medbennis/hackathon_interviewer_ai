@@ -1,32 +1,61 @@
-# 🎧 Interview-AI  
-### Simulateur d’entretien intelligent (Hackathon 2025)
+# 🎧 Simulateur d’Entretien Intelligent – app.py  
 
-Interview-AI est une application interactive permettant aux étudiants de s’entraîner à passer des entretiens de stage grâce à l’intelligence artificielle.  
-Le système analyse le CV, l’offre de stage et le profil du recruteur pour générer une simulation personnalisée, réaliste et interactive.
+## 🎯 Objectif du projet
+
+L’objectif est de permettre à un étudiant de :
+
+- Charger son **CV** (PDF/TXT)
+- Importer la **description du poste**
+- Lancer une **simulation d’entretien personnalisée**
+- Répondre aux questions en **texte**
+- Obtenir un **feedback instantané** :  
+  score, pertinence, alignement avec l’offre, points forts, axes d’amélioration
+- Recevoir un **rapport final** complet
+
+Cette version reste volontairement simplifiée (sans audio) pour faciliter l’évaluation.
 
 ---
 
-## 🚀 Fonctionnalités principales
+## 🚀 Fonctionnalités (version app.py)
 
-### 🔍 Analyse
-- Extraction automatique du texte des PDF/TXT (CV + offre).
-- Détection des compétences requises / compétences présentes.
-- Génération d’un résumé d’adéquation CV ↔ Offre.
+### 🔍 Analyse CV / Offre
+- Extraction automatique du texte des documents PDF ou TXT
+- Identification des compétences pertinentes
+- Synthèse de l’adéquation CV ↔ Offre
 
-### 🤖 Simulation d’entretien
-- Génération d’un **plan d’entretien personnalisé** (8 questions).
-- Questions adaptées au poste et au profil du recruteur.
-- Deux modes :
-  - **Mode texte**
-  - **Mode audio (avancé)**  
-    - TTS : lecture des questions  
-    - STT : transcription des réponses orales avec Whisper  
+### 🤖 Génération d’entretien
+- Production d’un plan d’entretien intelligent (8 questions)
+- Adaptation selon le **profil supposé du recruteur**
 
-### 📝 Évaluation intelligente
-- Analyse de la réponse du candidat via LLM.
-- Scoring : clarté, alignement, pertinence, profondeur.
-- Points forts, points faibles et pistes d’amélioration.
+### 📝 Évaluation LLM
+Pour chaque réponse étudiante :
 
-### 📄 Rapport final
-- Génération d’un compte-rendu complet après l'entretien.
-- Export textuel via l’application.
+- Score global /10
+- Clarté /5
+- Alignement avec l’offre /5
+- Pertinence /5
+- Profondeur /5
+- Points forts
+- Points faibles
+- Conseils d’amélioration
+
+### 📄 Rapport final généré automatiquement
+- Résumé complet des questions
+- Réponses du candidat
+- Évaluations détaillées
+- Recommandations globales
+
+---
+
+## ⚙️ Technologies utilisées
+
+- **Streamlit** : interface utilisateur
+- **Python 3.10+** : traitement et logique
+- **Fitz/PyMuPDF** : extraction du texte des PDF
+- **Groq API** :  
+  - LLM pour génération du plan d’entretien  
+  - LLM pour évaluer les réponses  
+- **Aucune dépendance audio** dans cette version (pas de TTS / STT)
+
+---
+
